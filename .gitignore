@@ -39,9 +39,9 @@ node_modules
 .node_repl_history
 
 # Transpiled code
-/es
 /lib
 /mjs
 
 coverage
 .nyc_output
+.yarn

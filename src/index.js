@@ -1,5 +1,7 @@
 /* @flow */
 
+import 'react-native-polyfill-globals/auto';
+
 import RelayNetworkLayer from './RelayNetworkLayer';
 import batchMiddleware, { RRNLBatchMiddlewareError } from './middlewares/batch';
 import legacyBatchMiddleware from './middlewares/legacyBatch';

@@ -6,11 +6,10 @@
     "node": ">=14.21.3"
   },
   "files": [
-    "es",
-    "lib"
+    "es"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "es/index.js",
+  "types": "es/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/relay-tools/react-relay-network-modern.git"
@@ -31,9 +30,9 @@
   },
   "homepage": "https://github.com/relay-tools/react-relay-network-modern#readme",
   "dependencies": {
-    "@types/node": "^18.14.6",
-    "core-js": "^3.29.0",
-    "extract-files": "^9.0.0"
+    "@types/node": "^20.6.2",
+    "core-js": "^3.32.2",
+    "extract-files": "^11.0.0"
   },
   "peerDependencies": {
     "relay-runtime": ">=1.4.0"

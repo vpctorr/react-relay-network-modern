@@ -16,7 +16,11 @@ export default function uploadMiddleware(): Middleware {
       variables: req.variables,
     };
 
-    const { clone: extractedOperations, files } = extractFiles(operations);
+    const { clone: extractedOperations, files } = extractFiles(
+      operations,
+      undefined,
+      isExtractableFile
+    );
 
     if (files.size) {
       const formData = new FormData();
@@ -44,4 +48,12 @@ export default function uploadMiddleware(): Middleware {
 
     return res;
   };
+}
+
+function isExtractableFile(value) {
+  return (
+    (typeof File !== 'undefined' && value instanceof File) ||
+    (typeof Blob !== 'undefined' && value instanceof Blob) ||
+    (!!value?.uri && !!value?.name && !!value?.type)
+  );
 }
